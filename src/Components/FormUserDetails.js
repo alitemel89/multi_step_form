@@ -3,7 +3,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
-import {ThemeProvider} from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
@@ -22,10 +22,8 @@ class FormUserDetails extends React.Component {
 
   }
   render() {
-    const { values } = this.props;
+    const { values, handleChange } = this.props;
     
-    
-
     return (
       <ThemeProvider>
         <AppBar style={{ backgroundColor: 'teal' }}>
@@ -40,6 +38,8 @@ class FormUserDetails extends React.Component {
             id="standard-basic"
             label="First Name"
             variant="outlined"
+            onChange= {handleChange('firstName')}
+            defaultValue={values.firstName}
           />
         </div>
         <div style={styles}>
@@ -47,6 +47,8 @@ class FormUserDetails extends React.Component {
             id="outlined-multiline-flexible"
             label="Last Name"
             variant="outlined"
+            onChange= {handleChange('lastName')}
+            defaultValue={values.lastName}
           />
         </div>
         <div style={styles}>
@@ -54,6 +56,8 @@ class FormUserDetails extends React.Component {
             id="outlined-multiline-flexible"
             label="Email"
             variant="outlined"
+            onChange= {handleChange('email')}
+            defaultValue={values.email}
           />
         </div>
         <div style={styles}>
