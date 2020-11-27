@@ -88,9 +88,6 @@ class Confirm extends React.Component {
               <ListItemText primary={bio} />
             </ListItem>
 
-
-
-
           </List>
         </div>
 
